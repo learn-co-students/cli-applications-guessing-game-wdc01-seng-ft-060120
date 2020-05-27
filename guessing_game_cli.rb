@@ -43,7 +43,7 @@ def correct
 end
 #message if wrong
 def incorrect(n)
-    puts "Sorry! The computer guesses #{n}"
+    puts "Sorry! The computer guessed #{n}."
 end
 #incorrect input message
 def incorrect_input
