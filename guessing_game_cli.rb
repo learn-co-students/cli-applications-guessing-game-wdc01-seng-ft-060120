@@ -1,3 +1,5 @@
+require 'pry'
+
 def run_guessing_game
     #generate number
     num = random_N_to_6
@@ -22,7 +24,14 @@ def prompt_user
 end
 #get input
 def get_user_input
-    gets.chomp
+    raw = gets.chomp
+    raw_to_int = raw.to_i
+    #if string only contained an int, return as int, else return raw
+    if (raw == raw_to_int.to_s)
+        return raw_to_int
+    else
+        return raw
+    end
 end
 #message for exiting
 def exit_game
